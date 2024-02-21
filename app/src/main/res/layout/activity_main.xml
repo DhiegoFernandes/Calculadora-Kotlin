@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="Calculadora"
+        android:textSize="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="155dp"
+        android:layout_height="203dp"
+        android:layout_marginBottom="155dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.778">
+
+        <RadioButton
+            android:id="@+id/rdbSoma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Soma" />
+
+        <RadioButton
+            android:id="@+id/rdbSubtracao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Subtração" />
+
+        <RadioButton
+            android:id="@+id/rdbDivisao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Divisão" />
+
+        <RadioButton
+            android:id="@+id/rdbMultiplicacao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Multiplicação" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/editTxt2"
+        android:layout_width="232dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Digite um número"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="@+id/editTxt1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editTxt1"
+        app:layout_constraintTop_toBottomOf="@+id/editTxt1" />
+
+    <EditText
+        android:id="@+id/editTxt1"
+        android:layout_width="232dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Digite um número"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/btnCalcular"
+        android:layout_width="137dp"
+        android:layout_height="74dp"
+        android:layout_marginTop="24dp"
+        android:text="Calcular"
+        app:layout_constraintEnd_toEndOf="@+id/radioGroup"
+        app:layout_constraintStart_toStartOf="@+id/radioGroup"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <TextView
+        android:id="@+id/txtResultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="264dp"
+        android:gravity="center"
+        android:text="Resultado"
+        android:textSize="22dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnCalcular"
+        app:layout_constraintEnd_toEndOf="@+id/btnCalcular"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toStartOf="@+id/btnCalcular" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
